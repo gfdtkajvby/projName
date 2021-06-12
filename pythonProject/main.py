@@ -1,6 +1,6 @@
 import telebot
 import config
-
+G
 bot = telebot.TeleBot(config.token)
 
 
@@ -13,6 +13,8 @@ def send_welcome(message):
 def get_text_messages(message):
     if message.text.lower() == 'привет':
         bot.send_message(message.from_user.id, 'Привет!')
+    elif message.text.lower() == 'как дела':
+        bot.send_message(message.from_user.id, 'Как у вашей мертвой матери.')
     else:
         bot.send_message(message.from_user.id, 'Не понимаю, что это значит.')
 
